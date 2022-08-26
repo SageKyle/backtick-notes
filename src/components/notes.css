@@ -1,0 +1,52 @@
+
+.Notes__Container {
+    /* min-height: 100%; */
+    text-align: left;
+    padding: 2rem 6rem;
+}
+
+.Brand__Name {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    color: cornflowerblue;
+}
+
+.Add__Note {
+    text-align: right;
+    width: 100%;
+}
+
+.Notes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    justify-content: center;
+    align-items: flex-start;
+    -webkit-box-align: center;
+    gap: 2.5rem;
+    margin: 6rem 0;
+}
+
+.Note__Item {
+    padding: 2rem;
+    border: 2px solid #777;
+    border-radius: .5rem;
+}
+
+.Note__Item__Heading {
+    text-transform: capitalize;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.Note__Item p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+.Expand__Note p {
+    overflow: inherit;
+    -webkit-line-clamp: unset;
+}
