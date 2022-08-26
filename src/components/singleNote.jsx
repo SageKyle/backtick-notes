@@ -31,15 +31,6 @@ export default function SingleNote({ setShowModal, setNotes }) {
         e.target[1].value = ''
     }
 
-    const handleSave = (e)=> {
-        e.preventDefault()
-        if (e.key.toLowerCase() === "s" && e.ctrlKey) {
-            console.log(e)
-            handleAddNote()
-
-        }
-    }
-
     return (
         <div className='Note__Backdrop'>
             <div className="Note__Container">
@@ -60,7 +51,6 @@ export default function SingleNote({ setShowModal, setNotes }) {
                     id="new-note" 
                     cols="30" rows="15" 
                     placeholder="Write your note here"
-                    onKeyDown={(e)=> handleSave(e)}
                 ></textarea>
                 <div className="Submit-btn">
                     <button type="submit"  onClick={notify}>Add Note</button>
